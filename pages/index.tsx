@@ -13,19 +13,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+        <h1 className={styles.title}>Welcome to ts-hooks HomePage</h1>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="http://localhost:3000/post" className={styles.card}>
+            <h2>useFetch Example</h2>
+            <p>useFetch는 비동기 Get 요청할 때 유용한 Hooks 입니다.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
