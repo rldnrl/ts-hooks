@@ -6,7 +6,7 @@ interface State<T> {
   error?: Error
 }
 
-type Cache<T> = { [url: string]: T }
+type Cache<T> = { [queryKey: string]: T }
 
 type Action<T> =
   | { type: 'loading' }
