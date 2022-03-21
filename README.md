@@ -1,5 +1,4 @@
 # TypeScript와 Custom Hooks
 
-## [useFetch](https://github.com/rldnrl/ts-hooks/blob/main/src/hooks/useFetch.ts)
-
+- `useFetch`
 GET 요청할 때 유용한 Hooks 입니다. `queryKey`를 이용하여 캐싱합니다.
