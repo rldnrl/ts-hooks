@@ -23,12 +23,29 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "extends": ["plugin:@nrwl/nx/typescript", "plugin:prettier/recommended"],
+      "rules": {
+        "prettier/prettier": "error",
+        "react/display-name": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": ["camelCase", "UPPER_CASE", "PascalCase"],
+            "selector": "variable",
+            "leadingUnderscore": "allow"
+          },
+          { "format": ["camelCase", "PascalCase"], "selector": "function" },
+          { "format": ["PascalCase"], "selector": "interface" },
+          { "format": ["PascalCase"], "selector": "typeAlias" }
+        ]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
+      "extends": ["plugin:@nrwl/nx/javascript", "plugin:prettier/recommended"],
       "rules": {}
     }
   ]
