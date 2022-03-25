@@ -1,1 +1,1 @@
-export * from './lib'
+export { default as useFetch } from './useFetch'
