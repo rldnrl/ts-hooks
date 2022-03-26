@@ -1,15 +1,12 @@
-import styled from '@emotion/styled'
-import NxWelcome from './nx-welcome'
-
-const StyledApp = styled.div`
-  // Your style here
-`
+import Counter from './components/Counter'
+import Toggle from './components/Toggle'
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="frontend" />
-    </StyledApp>
+    <>
+      <Toggle />
+      <Counter />
+    </>
   )
 }
 
