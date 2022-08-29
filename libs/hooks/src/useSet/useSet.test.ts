@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks'
+import { act, renderHook } from '@testing-library/react-hooks'
 import useSet from './useSet'
 
 describe('useSet()', () => {
@@ -20,5 +20,16 @@ describe('useSet()', () => {
     const { result } = renderHook(() => useSet())
 
     expect(result.current[0].size).toBe(0)
+  })
+
+  it('should add new value', () => {
+    const { result } = renderHook(() => useSet<number>())
+    const [, actions] = result.current
+
+    expect(result.current[0].size).toBe(0)
+
+    act(() => actions.add(1))
+
+    expect(result.current[0].size).toBe(1)
   })
 })
