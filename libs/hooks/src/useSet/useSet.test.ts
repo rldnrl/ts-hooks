@@ -32,4 +32,18 @@ describe('useSet()', () => {
 
     expect(result.current[0].size).toBe(1)
   })
+
+  it('should remove existing value', () => {
+    const initialSet = new Set([1])
+    const { result } = renderHook(() => useSet(initialSet))
+    const [set, actions] = result.current
+
+    act(() => {
+      if (set.has(1)) {
+        actions.remove(1)
+      }
+    })
+
+    expect(result.current[0].size).toBe(0)
+  })
 })
