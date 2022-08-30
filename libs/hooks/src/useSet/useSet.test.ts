@@ -33,6 +33,22 @@ describe('useSet()', () => {
     expect(result.current[0].size).toBe(1)
   })
 
+  it('should setAll replace all existing values', () => {
+    const initialSet = new Set([1, 2])
+    const { result } = renderHook(() => useSet(initialSet))
+    const [, actions] = result.current
+
+    expect(result.current[0].has(1)).toBe(true)
+    expect(result.current[0].has(2)).toBe(true)
+
+    act(() => actions.setAll([5]))
+
+    expect(result.current[0].has(1)).toBe(false)
+    expect(result.current[0].has(2)).toBe(false)
+    expect(result.current[0].has(5)).toBe(true)
+    expect(result.current[0].size).toBe(1)
+  })
+
   it('should remove existing value', () => {
     const initialSet = new Set([1])
     const { result } = renderHook(() => useSet(initialSet))
