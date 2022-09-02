@@ -62,4 +62,15 @@ describe('useSet()', () => {
 
     expect(result.current[0].size).toBe(0)
   })
+
+  it('should reset the set state', () => {
+    const initialSet = new Set([1, 2, 3, 4])
+    const { result } = renderHook(() => useSet(initialSet))
+    const [, actions] = result.current
+
+    act(() => actions.reset())
+
+    expect(result.current[0].has(1)).toBe(false)
+    expect(result.current[0].size).toBe(0)
+  })
 })
