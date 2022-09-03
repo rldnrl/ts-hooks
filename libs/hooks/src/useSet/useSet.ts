@@ -1,22 +1,22 @@
 import { useCallback, useState } from 'react'
 
-export type SetOrEntries<V> = Set<V> | V[]
+export type SetOrEntries<T> = Set<T> | T[]
 
-export interface Actions<V> {
-  add: (value: V) => void
-  setAll: (entries: SetOrEntries<V>) => void
-  remove: (value: V) => void
-  reset: Set<V>['clear']
+export interface Actions<T> {
+  add: (value: T) => void
+  setAll: (entries: SetOrEntries<T>) => void
+  remove: (value: T) => void
+  reset: Set<T>['clear']
 }
 
-type Return<V> = [Omit<Set<V>, 'add' | 'clear' | 'delete'>, Actions<V>]
+type Return<T> = [Omit<Set<T>, 'add' | 'clear' | 'delete'>, Actions<T>]
 
-export default function useSet<V>(
-  initialState: SetOrEntries<V> = new Set()
-): Return<V> {
+export default function useSet<T>(
+  initialState: SetOrEntries<T> = new Set()
+): Return<T> {
   const [set, setSet] = useState(new Set(initialState))
 
-  const actions: Actions<V> = {
+  const actions: Actions<T> = {
     add: useCallback((value) => {
       setSet((prevSet) => {
         const newSet = new Set(prevSet)
