@@ -1,56 +1,22 @@
 {
-  "name": "ts-hook",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
-  },
+  "name": "ts-hooks",
+  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@emotion/react": "11.8.2",
-    "@emotion/styled": "11.8.1",
-    "core-js": "^3.6.5",
-    "date-fns": "^2.28.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "regenerator-runtime": "0.13.7",
-    "tslib": "^2.0.0"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "devDependencies": {
-    "@emotion/babel-plugin": "11.7.2",
-    "@nrwl/cli": "13.9.4",
-    "@nrwl/cypress": "13.9.4",
-    "@nrwl/eslint-plugin-nx": "13.9.4",
-    "@nrwl/jest": "13.9.4",
-    "@nrwl/linter": "13.9.4",
-    "@nrwl/react": "13.9.4",
-    "@nrwl/web": "13.9.4",
-    "@nrwl/workspace": "13.9.4",
-    "@testing-library/react": "12.1.4",
-    "@testing-library/react-hooks": "7.0.2",
-    "@types/jest": "27.0.2",
-    "@types/node": "16.11.7",
-    "@types/react": "17.0.40",
-    "@types/react-dom": "17.0.13",
-    "@typescript-eslint/eslint-plugin": "~5.10.0",
-    "@typescript-eslint/parser": "~5.10.0",
-    "babel-jest": "27.2.3",
-    "cypress": "^9.1.0",
-    "eslint": "~8.7.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-cypress": "^2.10.3",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "7.29.3",
-    "eslint-plugin-react-hooks": "4.3.0",
-    "jest": "27.2.3",
-    "nx": "13.9.4",
-    "prettier": "^2.5.1",
-    "react-test-renderer": "17.0.2",
-    "ts-jest": "27.0.5",
-    "typescript": "~4.5.2"
+  "dependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
   }
 }
