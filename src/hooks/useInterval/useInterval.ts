@@ -1,5 +1,5 @@
-import {useEffect, useRef} from "react";
-import useIsomorphicLayoutEffect from "../useIsomorphicLayoutEffect";
+import { useEffect, useRef } from 'react'
+import useIsomorphicLayoutEffect from '../useIsomorphicLayoutEffect'
 
 type UseInterval = (callback: () => void, delay: number | null) => void
 
@@ -20,6 +20,7 @@ const useInterval: UseInterval = (callback, delay) => {
     return () => {
       clearInterval(interval)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 }
 
