@@ -17,11 +17,11 @@ type AsyncCallback<T> = () => Promise<T>
 
 type UseFetch<T> = State<T>
 
-function useFetch<T = unknown>(
+const useFetch = <T = unknown>(
   queryKey: string,
   callback?: AsyncCallback<T>,
   deps: DependencyList = []
-): UseFetch<T> {
+): UseFetch<T> => {
   const cache = useRef<Cache<T>>({})
 
   const cancelRequest = useRef<boolean>(false)

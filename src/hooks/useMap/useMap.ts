@@ -11,9 +11,9 @@ export interface Actions<K, V> {
 
 type Return<K, V> = [Omit<Map<K, V>, 'set' | 'clear' | 'delete'>, Actions<K, V>]
 
-export default function useMap<K, V>(
+const useMap = <K, V>(
   initialState: MapOrEntries<K, V> = new Map()
-): Return<K, V> {
+): Return<K, V> => {
   const [map, setMap] = useState(new Map(initialState))
 
   const actions: Actions<K, V> = {
@@ -41,3 +41,5 @@ export default function useMap<K, V>(
 
   return [map, actions]
 }
+
+export default useMap
