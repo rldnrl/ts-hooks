@@ -1,5 +1,5 @@
-import {useEffect, useRef} from "react";
-import useIsomorphicLayoutEffect from "../useIsomorphicLayoutEffect";
+import { useEffect, useRef } from 'react'
+import useIsomorphicLayoutEffect from '../useIsomorphicLayoutEffect'
 
 type UseTimeout = (callback: () => void, delay: number | null) => void
 
