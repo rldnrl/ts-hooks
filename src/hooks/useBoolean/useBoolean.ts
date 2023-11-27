@@ -8,7 +8,7 @@ interface UseBoolean {
   toggle: () => void
 }
 
-const useBoolean = (defaultValue = false): UseBoolean => {
+const useBoolean = (): UseBoolean => {
   const [value, setValue] = useState(false)
 
   const setTrue = () => setValue(true)
